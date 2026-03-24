@@ -8,20 +8,21 @@ const students = [
 
 // 1. Show all students
 const allDiv = document.getElementById("all");
-allDiv.innerHTML = "<h2>All Students</h2>";
+let allHTML = "<h2>All Students</h2>";
 
 students.forEach(student => {
-  allDiv.innerHTML += `${student.name} : ${student.grade}<br>`;
+  allHTML += `${student.name} : ${student.grade}<br>`;
 });
+passedDiv.innerHTML = passedHTML;
 
 // 2. Filter passed students
 const passedDiv = document.getElementById("passed");
-const passed = students.filter(student => student.grade >= 70);
+const passed = students.filter(student.grade >= 70);
 
-passedDiv.innerHTML = "<h2>Passed Students</h2>";
+let passedHTML = "<h2>Passed Students</h2>";
 
 passed.forEach(student => {
-  passedDiv.innerHTML += `${student.name} : ${student.grade}<br>`;
+  passedHTML += `${student.name} : ${student.grade}<br>`;
 });
 
 // 3. Calculate average
